@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Patek Philippe Grandmaster Chime",
+    "description": "The most intricate wristwatch ever made by Patek Philippe, featuring 20 complications and a reversible case.",
+    "category": "Luxury Watches",
+    "imageUrl": "https://www.patek.com/resources/img/instagram/episodes/episode_24/post_1/6300G_010_2019_1_1920.jpg",
+    "variants": [
+      {
+        "color": "Black Leather",
+        "size": "One Size",
+        "additionalPrice": 10500.00,
+        "stock": 50
+      },
+      {
+        "color": "Pink Leather",
+        "size": "One Size",
+        "additionalPrice": 10750.00,
+        "stock": 50
+      },
+      {
+        "color": "Brown Leather",
+        "size": "One Size",
+        "additionalPrice": 10700.00,
+        "stock": 50
+      }
+    ]
+  },
+  {
+    "name": "Rolex Daytona Rainbow",
+    "description": "Studded with sapphires in a rainbow formation, this Rolex Daytona combines luxury with a unique, colorful flair.",
+    "category": "Luxury Watches",
+    "imageUrl": "https://img.chrono24.com/images/uhren/27550326-fr6mxnkew55eywrxnaqsde99-ExtraLarge.jpg",
+    "variants": [
+      {
+        "color": "Rainbow",
+        "size": "One Size",
+        "additionalPrice": 340000.00,
+        "stock": 20
+      },
+      {
+        "color": "Gold",
+        "size": "One Size",
+        "additionalPrice": 300000.00,
+        "stock": 20
+      }
+    ]
+  },
+  {
+    "name": "Audemars Piguet Royal Oak Offshore",
+    "description": "Iconic octagonal design with a grand complication and impeccable craftsmanship.",
+    "category": "Luxury Watches",
+    "imageUrl": "https://www.juwelierburger.com/webshop-images/products/Audemars_Piguet/35348/223.jpg",
+    "variants": [
+      {
+        "color": "Silver",
+        "size": "One Size",
+        "additionalPrice": 850000.00,
+        "stock": 15
+      },
+      {
+        "color": "Gold",
+        "size": "One Size",
+        "additionalPrice": 890000.00,
+        "stock": 15
+      }
+    ]
+  },
+  {
+    "name": "Gucci Embroidered Velvet Blazer",
+    "description": "This blazer features intricate gold embroidery on velvet, exemplifying Gucci's iconic style and luxury.",
+    "category": "Designer Clothing",
+    "imageUrl": "https://media.gucci.com/style/DarkGray_Center_0_0_980x980/1662504381/716268_ZAK41_1043_005_100_0000_Light-Embroidered-velvet-jacket.jpg",
+    "variants": [
+      {
+        "color": "Gold",
+        "size": "Small",
+        "additionalPrice": 6500.00,
+        "stock": 10
+      },
+      {
+        "color": "Gold",
+        "size": "Medium",
+        "additionalPrice": 6750.50,
+        "stock": 10
+      },
+      {
+        "color": "Gold",
+        "size": "Large",
+        "additionalPrice": 6900.50,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "name": "Chanel Classic Suit",
+    "description": "A timeless Chanel tweed suit that offers elegance and sophistication with every detail.",
+    "category": "Designer Clothing",
+    "imageUrl": "https://i.pinimg.com/736x/4d/e1/4d/4de14d75a8d6b66d9d7e40abe98aaf73.jpg",
+    "variants": [
+      {
+        "color": "Black and White",
+        "size": "Small",
+        "additionalPrice": 9000.00,
+        "stock": 5
+      },
+      {
+        "color": "Black and White",
+        "size": "Medium",
+        "additionalPrice": 10000.00,
+        "stock": 5
+      },
+      {
+        "color": "Black and White",
+        "size": "Large",
+        "additionalPrice": 1000.50,
+        "stock": 5
+      }
+    ]
+  },
+  {
+    "name": "Hermès Leather Jacket",
+    "description": "Crafted from the finest materials, this Hermès leather jacket sets the standard for luxury outerwear.",
+    "category": "Designer Clothing",
+    "imageUrl": "https://mightychic.com/wp-content/uploads/2023/12/hermes-leather-jacket-marine-by-jean-paul-gaultier_b8350f09-efed-47e7-a8e5-996db6263ac6.jpg",
+    "variants": [
+      {
+        "color": "Black",
+        "size": "Small",
+        "additionalPrice": 12500.00,
+        "stock": 8
+      },
+      {
+        "color": "Black",
+        "size": "Medium",
+        "additionalPrice": 12500.00,
+        "stock": 8
+      },
+      {
+        "color": "Black",
+        "size": "Large",
+        "additionalPrice": 15000.00,
+        "stock": 8
+      }
+    ]
+  },
+  {
+    "name": "Louis Vuitton Monogram Canvas Bag",
+    "description": "Featuring the classic LV monogram, this canvas bag represents the pinnacle of luxury in everyday fashion.",
+    "category": "Exclusive Accessories",
+    "imageUrl": "https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-gm-monogram-canvas-handbags--M45320_PM1_Side%20view.jpg",
+    "variants": [
+      {
+        "color": "Brown",
+        "size": "One Size",
+        "additionalPrice": 5000.00,
+        "stock": 30
+      },
+      {
+        "color": "Navy",
+        "size": "One Size",
+        "additionalPrice": 5500.75,
+        "stock": 30
+      },
+      {
+        "color": "Black",
+        "size": "One Size",
+        "additionalPrice": 5800.50,
+        "stock": 30
+      }
+    ]
+  },
+  {
+    "name": "Cartier Love Bracelet",
+    "description": "Symbolizing timeless love, this Cartier bracelet is crafted in 18k of material and set with diamonds.",
+    "category": "Exclusive Accessories",
+    "imageUrl": "https://www.cartier.com/variants/images/1647597277058376/img1/w260_tpadding12.jpg",
+    "variants": [
+      {
+        "color": "Gold",
+        "size": "One Size",
+        "additionalPrice": 15000.00,
+        "stock": 25
+      },
+      {
+        "color": "Silver",
+        "size": "One Size",
+        "additionalPrice": 14500.75,
+        "stock": 25
+      },
+      {
+        "color": "Titanium",
+        "size": "One Size",
+        "additionalPrice": 14800.00,
+        "stock": 25
+      }
+    ]
+  },
+  {
+    "name": "Bvlgari Serpenti Diamond Necklace",
+    "description": "An exquisite piece that wraps around the neck with pavé diamonds, reflecting Bvlgari's craftsmanship.",
+    "category": "Exclusive Accessories",
+    "imageUrl": "https://vividdiamonds.com/cdn/shop/files/43641-mdoel_2000x.jpg?v=1702306973",
+    "variants": [
+      {
+        "color": "Silver",
+        "size": "One Size",
+        "additionalPrice": 190000.00,
+        "stock": 5
+      },
+      {
+        "color": "Gold",
+        "size": "One Size",
+        "additionalPrice": 200000.00,
+        "stock": 5
+      }
+    ]
+  }
+]

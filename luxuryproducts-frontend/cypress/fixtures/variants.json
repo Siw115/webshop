@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "color": "Red",
+    "size": "M",
+    "additionalPrice": 10.0,
+    "stock": 100,
+    "productId": 1
+  },
+  {
+    "id": 2,
+    "color": "Blue",
+    "size": "S",
+    "additionalPrice": 15.0,
+    "stock": 200,
+    "productId": 2
+  }
+]

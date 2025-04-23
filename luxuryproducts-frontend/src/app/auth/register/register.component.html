@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <label for="email">Email</label>
+  
+          <input
+            type="text"
+            class="form-control text-center"
+            formControlName="email"
+            id="email"
+          />
+        </div>
+  
+        <div class="form-group mb-3">
+          <label for="password">Password</label>
+  
+          <input
+            type="password"
+            class="form-control text-center"
+            formControlName="password"
+            id="password1"
+          />
+        </div>
+  
+        <button
+          type="submit"
+          class="btn btn-md btn-dark"
+          [disabled]="!loginForm.valid"
+        >
+          Register
+        </button>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="registerError" class="login-error">
+    Register failed. Please check your credentials and try again.
+  </div>

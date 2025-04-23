@@ -1,0 +1,10 @@
+<div class="dashboard-container">
+    <div class="dashboard-submenu">
+        <div class="btn-group" role="group" aria-label="Dashboard Submenus">
+            <a [routerLink]="'/home'" class="btn btn-default" [ngClass]="{'active': currentRoute == '/home'}">Home</a>
+            <a [routerLink]="'/dashboard/orders'" class="btn btn-default" [ngClass]="{'active': currentRoute == '/dashboard/orders'}">Orders</a>
+            <a [routerLink]="'/profile'" class="btn btn-default" [ngClass]="{'active': currentRoute == '/profile'}">Profile</a>
+            <a *ngIf="isAdmin()" [routerLink]="'/dashboard/variants'" class="btn btn-default" [ngClass]="{'active': currentRoute == '/dashboard/variants'}">Variants</a>
+        </div>
+    </div>
+</div>

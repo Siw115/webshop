@@ -1,0 +1,48 @@
+<!-- Notification -->
+<div *ngIf="notificationVisible" class="alert alert-success notification" style="margin-bottom: 20px;">
+    <p>Product added to cart!</p>
+    <button (click)="navigateToCart()" class="view-cart-btn">View Cart</button>
+</div>
+
+<!-- Product Details -->
+<h4>{{ product.name }} - ${{ selectedVariant ? selectedVariant.additionalPrice : 'N/A' }}</h4>
+<p>{{ product.description }}</p>
+
+<!-- Product Image -->
+<div class="row">
+    <div class="col-xs-12">
+        <img [src]="product.imageUrl" alt="Product Image" class="img-responsive center-block" style="max-height: 200px; margin-bottom: 20px;">
+    </div>
+</div>
+
+<!-- Variant Selection -->
+<div class="row" *ngIf="product.variants && product.variants.length > 0">
+    <div class="col-xs-12">
+        <label for="variant">Select Variant:</label>
+        <select id="variant" class="form-control" (change)="onVariantChange($event)">
+            <option *ngFor="let variant of product.variants" [value]="variant.id">
+                {{ variant.color }} - {{ variant.size }} - ${{ variant.additionalPrice }}
+            </option>
+        </select>
+    </div>
+</div>
+
+<!-- Action Buttons -->
+<div class="row">
+    <div class="col-xs-6 text-left">
+        <!-- This column is left empty for future use -->
+    </div>
+    <div class="col-xs-6 text-right">
+        <div>
+            <button class="btn btn-md btn-success" (click)="onBuyProduct()">
+                Add to cart
+            </button>
+        </div>
+        <div style="margin-top: 10px;">
+            <button class="btn btn-md btn-info" (click)="onViewDetails()">
+                Product Details
+            </button>
+        </div>
+    </div>
+</div>
+<hr />

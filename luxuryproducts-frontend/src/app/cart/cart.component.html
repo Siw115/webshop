@@ -1,0 +1,44 @@
+<h3>Checkout</h3>
+<hr />
+
+<ng-container *ngFor="let cartItem of productsInCart; let i = index">
+    <!-- Product Image and Name -->
+    <div style="display: flex; align-items: center;">
+        <img [src]="cartItem.product.imageUrl" alt="Product Image" style="width: 100px; height: auto; margin-right: 10px;">
+        <div>
+            <strong>{{ cartItem.product.name }}</strong>
+            <div>
+                Variant: {{ cartItem.variant.color }} - {{ cartItem.variant.size }} (${{ cartItem.variant.additionalPrice }})
+            </div>
+        </div>
+    </div>
+
+    <!-- Quantity Controls -->
+    <div style="margin-top: 10px;">
+        <button class="btn btn-default" (click)="decreaseQuantity(i)">-</button>
+        <span>Quantity: {{ cartItem.quantity }}</span>
+        <button class="btn btn-default" (click)="increaseQuantity(i)">+</button>
+    </div>
+
+    <!-- Remove From Cart Button -->
+    <button class="btn btn-danger" (click)="removeFromCart(i)" style="margin-top: 10px;">Remove From Cart</button>
+    <hr />
+</ng-container>
+
+<ng-container *ngIf="productsInCart.length > 0">
+    <app-new-address *ngIf="user && user.addresses && user.addresses.length < 1"></app-new-address>
+
+    <!-- Show Checkout button if user is logged in and has addresses -->
+    <button class="btn btn-lg btn-success" (click)="placeOrder()" *ngIf="user && user.addresses && user.addresses.length > 0">
+        Checkout ({{ totalItems() }} items), ${{ totalOrderValue.toFixed(2) }}
+    </button>
+
+    <!-- Show Log In button if user is not logged in -->
+    <button class="btn btn-lg btn-primary" (click)="logIn()" *ngIf="!user">
+        Log In
+    </button>
+</ng-container>
+
+<ng-container *ngIf="productsInCart.length === 0">
+    <h4>Your shopping cart is empty.</h4>
+</ng-container>

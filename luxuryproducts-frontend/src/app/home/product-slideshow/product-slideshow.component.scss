@@ -1,0 +1,19 @@
+.carousel-inner .item {
+    position: relative;
+    padding-top: 56.25%; /* Aspect ratio of 16:9, adjust as needed */
+    max-width: 600px; /* Max width */
+    margin: auto; /* Centers the carousel */
+  }
+  
+  .carousel-inner .item img {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center the image */
+    width: 100%; /* Set the width as desired */
+    height: 80%; /* Set the height as desired */
+    object-fit: scale-down; /* Maintain aspect ratio while covering the area */
+    max-height: 500px; /* Max height, adjust as necessary */
+}
+
+

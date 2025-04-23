@@ -1,0 +1,39 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="text-center" style="width: 100px">Order ID</th>
+      <th class="text-center" style="width: 100px">Datum</th>
+      <th class="text-center" style="width: 150px">Order Status</th>
+      <th class="text-center" style="width: 200px">Product</th>
+      <th class="text-center" style="width: 100px">Unit Price</th>
+      <th class="text-center" style="width: 100px">Quantity</th> <!-- New Quantity Header -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 100px">{{ order.id || "N/A" }}</td>
+      <td style="width: 100px">{{ order.datum || "N/A" }}</td>
+      <td style="width: 150px">{{ order.orderStatus || "N/A" }}</td>
+      <td style="width: 200px"></td>
+      <td style="width: 100px"></td>
+      <td style="width: 100px"></td> <!-- Empty Cell for Quantity Header -->
+    </tr>
+    <!-- Iterate over orderLines -->
+    <tr *ngFor="let orderLine of order.orderLines">
+      <td style="width: 100px"></td>
+      <td style="width: 100px"></td>
+      <td style="width: 150px"></td>
+      <td style="width: 200px">{{ orderLine.name || "N/A" }}</td>
+      <td style="width: 100px">${{ orderLine.unit_price || "N/A" }}</td>
+      <td style="width: 100px">{{ orderLine.quantity || "N/A" }}</td> <!-- Quantity Column -->
+    </tr>
+    <tr>
+      <td style="width: 100px"></td>
+      <td style="width: 100px"></td>
+      <td style="width: 150px"></td>
+      <td style="width: 200px"><strong>TOTAL: </strong></td>
+      <td style="width: 100px">${{ calculateTotalPrice(order) || "N/A" }}</td>
+      <td style="width: 100px"></td> <!-- Empty Cell for Total Row -->
+    </tr>
+  </tbody>
+</table>

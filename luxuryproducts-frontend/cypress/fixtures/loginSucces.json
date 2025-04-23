@@ -1,0 +1,5 @@
+{
+  "email": "test@account.com",
+  "token": "valid-jwt-token",
+  "roles": ["ROLE_USER"]
+}

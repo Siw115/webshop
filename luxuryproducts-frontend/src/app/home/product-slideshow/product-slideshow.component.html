@@ -1,0 +1,21 @@
+<div id="productCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item" *ngFor="let product of products; let i = index" [class.active]="i === currentIndex" (click)="navigateToProductDetail(product)">
+            <img [src]="product.imageUrl" alt="Product Image" class="carousel-image">
+            <div class="carousel-caption">
+                <h3>{{ product.name }}</h3>
+                <p>${{ product.price }}</p>
+                <p>{{ product.description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" (click)="prevProduct()">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" (click)="nextProduct()">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>

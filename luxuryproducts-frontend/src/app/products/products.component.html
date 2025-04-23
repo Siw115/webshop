@@ -1,0 +1,34 @@
+<h3>Products</h3>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label for="categorySelect">Choose a Category:</label>
+                <select
+                        id="categorySelect"
+                        class="form-control"
+                        [(ngModel)]="categoryId"
+                        (change)="onCategoryChange($event)"
+                >
+                    <option value="0">All Products</option>
+                    <option value="1">Weightlifting Equipment</option>
+                    <option value="2">Supplements</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="productsLoading">
+    <p><strong>Products Loading...</strong></p>
+</div>
+<div *ngIf="!productsLoading" class="row">
+    <div *ngFor="let product of productsList; trackBy: trackByProductId" class="col-md-6 col-sm-6">
+        <app-product-thumbnail
+                [product]="product"
+                (addToCart)="onAddToCart($event)"
+        ></app-product-thumbnail>
+    </div>
+</div>

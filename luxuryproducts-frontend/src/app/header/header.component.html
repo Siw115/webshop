@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <!-- Navigation bar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle grouped for better mobile display -->
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#navbar-links"
+              aria-expanded="false"
+              (click)="toggleNavbar()"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="'home'">PowerFlex</a>
+          </div>
+
+          <!-- Collect the nav links for toggling -->
+          <div
+            class="collapse navbar-collapse"
+            [ngClass]="{ in: !navbarCollapsed }"
+            id="navbar-links"
+          >
+            <ul class="nav navbar-nav">
+              <li>
+                <a [routerLink]="'home'">{{
+                  isActiveRoute("home") ? "&lt;Home&gt;" : "Home"
+                }}</a>
+              </li>
+              <li>
+                <a [routerLink]="'cart'"
+                  >{{
+                    isActiveRoute("cart") ? "&lt;Cart&gt;" : "Cart"
+                  }}
+                  (<span>{{ totalItems() }}</span
+                  >)</a
+                >
+              </li>
+              <li>
+                <a [routerLink]="'products'">{{
+                  isActiveRoute("products") ||
+                  isActiveRoute("product-details/")
+                    ? "&lt;Products&gt;"
+                    : "Products"
+                }}</a>
+              </li>
+
+              <!-- Conditional links -->
+              <ng-container *ngIf="user">
+                <li><a [routerLink]="'profile'">{{ isActiveRoute("profile") ? "&lt;Profile&gt;" : "Profile"}}</a></li>
+                <li><a [routerLink]="'dashboard'">{{ isActiveRoute("dashboard") ? "&lt;Dashboard&gt;" : "Dashboard"}}</a></li>
+                <li>
+                  <a [routerLink]="'home'" (click)="dropToken()">Log out</a>
+                </li>
+              </ng-container>
+              <ng-container *ngIf="!user">
+                <li><a [routerLink]="'auth/login'">{{ isActiveRoute("auth/login") ? "&lt;Log in&gt;" : "Log in"}}</a></li>
+                <li><a [routerLink]="'auth/register'">{{ isActiveRoute("auth/register") ? "&lt;Register&gt;" : "Register"}}</a></li>
+              </ng-container>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <ng-container *ngIf="user">
+                <li>
+                  <a [routerLink]="'profile'">Hello, {{ user.email }}</a>
+                </li>
+              </ng-container>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+    </div>
+  </div>
+</div>

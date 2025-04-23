@@ -1,0 +1,25 @@
+<div *ngIf="orders.length > 0; else noOrders">
+    <div *ngFor="let order of [orders[selectedOrderIndex]]">
+        <h3>Order #{{ order.id }}</h3>
+        <p>Date: {{ order.datum }}</p>
+        <p>Status: {{ order.orderStatus }}</p>
+        <p>Total Price: {{ calculateTotalPrice(order) | currency }}</p>
+
+        <div *ngFor="let line of order.orderLines">
+            <p>Product: {{ line.productName }}</p>
+            <p>Description: {{ line.productDescription }}</p>
+            <p>Price: {{ line.productPrice | currency }}</p>
+            <p>Quantity: {{ line.quantity }}</p>
+            <p>Color: {{ line.variantColor }}</p>
+            <p>Size: {{ line.variantSize }}</p>
+            <hr />
+        </div>
+    </div>
+
+    <button (click)="previousOrder()" [disabled]="selectedOrderIndex === 0">Previous</button>
+    <button (click)="nextOrder()" [disabled]="selectedOrderIndex === orders.length - 1">Next</button>
+</div>
+
+<ng-template #noOrders>
+    <p>No orders available.</p>
+</ng-template>

@@ -1,0 +1,42 @@
+<h3>Product Variants</h3>
+<div *ngIf="variants.length === 0" class="text-center">
+    <p><strong>No variants available.</strong></p>
+</div>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-primary mb-3" (click)="addVariant()">Add Variant</button>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Additional Price</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Product ID</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let variant of variants; let i = index; trackBy: trackByVariant">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ variant.color }}</td>
+                    <td>{{ variant.size }}</td>
+                    <td>{{ variant.additionalPrice }}</td>
+                    <td>{{ variant.stock }}</td>
+                    <td>{{ variant.productId }}</td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline-secondary mr-2" (click)="editVariant(variant.id)">
+                            Edit
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-danger" (click)="removeVariant(variant.id)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+<h3>Profile</h3>
+<!-- Display user email -->
+@if(userLoading) {
+<p><strong>User Loading...</strong></p>
+} @else {
+<p>Email: {{ user.email }}</p>
+@if (user.addresses.length > 0) {
+<p>Address Information:</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- Loop through each address -->
+      <div
+        *ngFor="
+          let address of user.addresses;
+          let i = index;
+          trackBy: trackByAddress
+        "
+        class="panel panel-default"
+      >
+        <div class="panel-heading">
+          <h3 class="panel-title">Address {{ i + 1 }}</h3>
+          <!-- Edit button -->
+          <button
+            type="button"
+            class="close edit-address-button"
+            (click)="editAddress(i)"
+          >
+            [Edit]
+            <!-- Pencil icon -->
+          </button>
+          <!-- Delete button -->
+          <button
+            type="button"
+            class="close remove-address-button"
+            aria-label="Close"
+            (click)="removeAddress(address)"
+          >
+            <span aria-hidden="true">[Delete]</span>
+          </button>
+        </div>
+        <div *ngIf="editingIndex === i" class="panel-body">
+          <!-- Editable Form -->
+          <form
+            [formGroup]="addressForm"
+            (ngSubmit)="onSubmit(address, i)"
+          >
+            <div class="form-group">
+              <label for="street">Street</label>
+              <input
+                type="text"
+                value="{{address.street}}"
+                id="street"
+                class="form-control"
+                formControlName="street"
+              />
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                type="text"
+                value="{{address.city}}"
+                id="city"
+                class="form-control"
+                formControlName="city"
+              />
+            </div>
+            <div class="form-group">
+              <label for="state">State/Province</label>
+              <input
+                type="text"
+                value="{{address.state}}"
+                id="state"
+                class="form-control"
+                formControlName="state"
+              />
+            </div>
+            <div class="form-group">
+              <label for="postalCode">Postal Code</label>
+              <input
+                type="text"
+                value="{{address.postalCode}}"
+                id="postalCode"
+                class="form-control"
+                formControlName="postalCode"
+              />
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <input
+                type="text"
+                value="{{address.country}}"
+                id="country"
+                class="form-control"
+                formControlName="country"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </form>
+        </div>
+        <div class="panel-body" *ngIf="editingIndex !== i">
+          <!-- Non-editable View -->
+          <p><strong>Country:</strong> {{ address.country }}</p>
+          <p><strong>State:</strong> {{ address.state }}</p>
+          <p><strong>City:</strong> {{ address.city }}</p>
+          <p><strong>Street:</strong> {{ address.street }}</p>
+          <p><strong>Postal Code:</strong> {{ address.postalCode }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+} }

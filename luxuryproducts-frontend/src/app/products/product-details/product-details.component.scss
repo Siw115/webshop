@@ -1,0 +1,32 @@
+/* Notification Style */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  /* General Button Style */
+  .btn, .view-cart-btn {
+    border: 2px solid #dedede; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  /* Specific Style for View Cart Button */
+  .view-cart-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for better shape */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underlining */
+    display: inline-block; /* Proper button shape */
+    font-size: 16px; /* Readable font size */
+    margin: 4px 2px; /* Margin for spacing */
+    cursor: pointer; /* Pointer cursor on hover */
+    /* Border already defined in General Button Style */
+  }
+  
+  .view-cart-btn:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+  }
+  
